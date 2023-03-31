@@ -1,5 +1,6 @@
-package com.dj.demos.photoz.clone;
+package com.dj.demos.photoz.clone.service;
 
+import com.dj.demos.photoz.clone.model.Photo;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;

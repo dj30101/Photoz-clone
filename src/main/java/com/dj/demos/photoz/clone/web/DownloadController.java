@@ -1,5 +1,7 @@
-package com.dj.demos.photoz.clone;
+package com.dj.demos.photoz.clone.web;
 
+import com.dj.demos.photoz.clone.model.Photo;
+import com.dj.demos.photoz.clone.service.PhotozService;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

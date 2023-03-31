@@ -1,17 +1,14 @@
-package com.dj.demos.photoz.clone;
+package com.dj.demos.photoz.clone.web;
 
-import jakarta.validation.Valid;
+import com.dj.demos.photoz.clone.model.Photo;
+import com.dj.demos.photoz.clone.service.PhotozService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.io.IOException;
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
 
 @RestController
 public class PhotozController {
@@ -48,6 +45,6 @@ public class PhotozController {
 
     @PostMapping("/photoz")
     public Photo create(@RequestPart("data") MultipartFile file) throws IOException {
-        return photozService.save(file.getOriginalFilename(),file.getContentType(), file.getBytes());
+        return photozService.save(file.getOriginalFilename(), file.getContentType(), file.getBytes());
     }
 }
